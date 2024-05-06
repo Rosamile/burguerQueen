@@ -1,0 +1,52 @@
+{
+  "name": "burger-queen-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "start": "nodemon index.js",
+    "test:e2e": "jest --verbose --testPathPattern e2e --globalSetup ./e2e/globalSetup --globalTeardown ./e2e/globalTeardown --runInBand",
+    "test:unit": "jest --verbose --testPathIgnorePatterns e2e",
+    "test": "npm run test:e2e && npm run test:unit",
+    "lint": "eslint .",
+    "docs:generate": "jsdoc -c jsdoc.conf --readme README-docs.md",
+    "docs:deploy": "rm -rf docs && npm run docs:generate && gh-pages -d docs"
+  },
+  "dependencies": {
+    "@angular/cli": "^17.3.6",
+    "@shelf/jest-mongodb": "^4.1.7",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "chalk": "^5.3.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "6.3",
+    "mongodb-memory-server": "^8.12.2",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "docdash": "^1.2.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "gh-pages": "^3.1.0",
+    "jest": "^27.5.1",
+    "jsdoc": "^3.6.6",
+    "jsdoc-http-plugin": "^0.3.2",
+    "node-fetch": "^3.1.0",
+    "nodemon": "^3.0.3",
+    "supertest": "^6.3.4",
+    "tree-kill": "^1.2.2"
+  },
+  "bootcamp": {
+    "createdAt": "2023-11-23T20:23:59.750Z",
+    "commit": "de8f3a8dd3f24452f18e56bd8efae4d99e7fe353"
+  },
+  "description": "* [1. Preámbulo](#1-pre%C3%A1mbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptaci%C3%B3n-m%C3%ADnimos-del-proyecto)\r * [6. Hacker (Devops) Edition con Docker](#6-hacker-%28devops%29-edition-con-docker)\r * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)",
+  "keywords": [],
+  "author": ""
+}
